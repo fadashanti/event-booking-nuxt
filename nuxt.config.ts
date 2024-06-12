@@ -2,16 +2,6 @@
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
   devtools: { enabled: true },
-
-  tailwindcss: {
-    cssPath: ['~/assets/css/tailwind.css', { injectPosition: "first" }],
-    configPath: 'tailwind.config',
-    exposeConfig: {
-      level: 2
-    },
-    config: {},
-    viewer: true,
-  },
   
   build: {
     transpile: ['vuetify'],
@@ -23,8 +13,7 @@ export default defineNuxtConfig({
         // @ts-expect-error
         config.plugins.push(vuetify({ autoImport: true }))
       })
-    },
-    "@nuxtjs/tailwindcss"
+    }
   ],
 
   vite: {
