@@ -7,6 +7,12 @@ export default defineNuxtConfig({
     transpile: ['vuetify'],
   },
 
+  alias: {
+    assets: "/<rootDir>/assets"
+  },
+
+  css: ['~/assets/css/main.css'],
+
   modules: [
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
